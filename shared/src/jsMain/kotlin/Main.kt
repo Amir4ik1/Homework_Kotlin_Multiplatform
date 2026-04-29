@@ -65,6 +65,11 @@ fun main() {
                 }) {
                     Text("Stop")
                 }
+                Button(attrs = {
+                    onClick { viewModel.onCopyClicked() }
+                }) {
+                    Text("Copy")
+                }
             }
         }
     }

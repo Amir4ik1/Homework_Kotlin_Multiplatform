@@ -33,6 +33,10 @@ class StopwatchViewModel {
         job?.cancel()
     }
 
+    fun onCopyClicked() {
+        copyToClipboard(_uiState.value.formattedTime)
+    }
+
     fun onDestroy() {
         coroutineScope.cancel()
     }

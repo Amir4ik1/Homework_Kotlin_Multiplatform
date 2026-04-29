@@ -16,6 +16,9 @@ struct ContentView: View {
                 Button(action: viewModel.onStopClicked, label: {
                     Text("Stop")
                 })
+                Button(action: viewModel.onCopyClicked, label: {
+                    Text("Copy")
+                })
             }
         }
     }
@@ -33,6 +36,10 @@ class StopwatchViewModelWrapper: ObservableObject {
     
     func onStopClicked() {
         viewModel.onStopClicked()
+    }
+
+    func onCopyClicked() {
+        viewModel.onCopyClicked()
     }
     
     init() {
